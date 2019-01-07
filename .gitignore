@@ -3,4 +3,5 @@
 *.pyc
 */DockerImage/*.tar
 */vm/*
+!test/readelf_x86_64.tar.gz
 
