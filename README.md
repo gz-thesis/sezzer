@@ -74,7 +74,7 @@ $ cp -r debian-9.2.1-i386 $SEZZER_HOME/s2e/images
 ```
 
 
-# Execute
+# Run
 For detailed usage information, you can try
 ```bash
 $ cd $SEZZER_HOME
