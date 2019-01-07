@@ -2,7 +2,19 @@
 
 Sezzer is a binary only software testing framework targets linux binaries and analyze for memory bugs that takes advantages from both dynamic concolic execution and greybox fuzzing for better code coverage and target specific vulnerability discovery.
 
-  
+We evaluation showed that with benchmark binaries, SEZZER is able to achieve an average of more than 50% more node coveragecomparing to several other software testing tools. With Lava-M test suite, SEZZER is able to find all the inserted vulnerabilities in 3 out of 4 binaries in a short amount of time, and exploited 2076 out of 2163 vulnerabilities of the 4th binary in a 24 hour run. We also found several bugs in master branch of GNU-binutils that leads to 5 patches and 3 CVEs.
+
+Comparing with pure AFL on coreutils, Sezzer improves the node coverage for 19.3% on average and decreased coverage by a small margin on only 6 of the binaries.
+![coreutils](https://github.com/gz-thesis/sezzer/raw/master/test/test.png)
+
+For the benchmark binaries that are widely used by other tools, The result showed that comparing to the best performer other than Sezzer, our framework achieved more than 130% more coverage on 2 of the binaries (nm and objdump), around 30% 50% more coverage on 5 of the binaries (mutool, xmllint, cxxfilt, readelf and tcpdump), 13% more coverage on one binary (djpeg)
+and 9% less coverage on 1 binary(readpng).
+![benchmark binaries](https://github.com/gz-thesis/sezzer/raw/master/test/bench.png)
+
+The result of Lava-M test suite experiment showed that for three out of the four binaries, Sezzer is not only able to
+find all the vulnerabilities established, but also able to trigger crashes that are not listed
+by the authors of LAVA, and for who, Sezzer is able to find 2076 out of 2136 crashes.
+![LAVA-M](https://github.com/gz-thesis/sezzer/raw/master/test/lava.png)
 # Installation
 
 Sezzer is composed of four major parts and one optional component:
