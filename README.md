@@ -6,21 +6,21 @@ We evaluation showed that with benchmark binaries, SEZZER is able to achieve an 
 
 Comparing with pure AFL on coreutils, Sezzer improves the node coverage for 19.3% on average and decreased coverage by a small margin on only 6 of the binaries.
 
-<img src="https://github.com/gz-thesis/sezzer/raw/master/test/test.png" width="660" height="420">
+<img src="https://github.com/gz-thesis/sezzer/raw/master/test/test.png" width="660" height="420" />
 
 For the benchmark binaries that are widely used by other tools, The result showed that comparing to the best performer other than Sezzer, our framework achieved more than 130% more coverage on 2 of the binaries (nm and objdump), around 30% 50% more coverage on 5 of the binaries (mutool, xmllint, cxxfilt, readelf and tcpdump), 13% more coverage on one binary (djpeg)
 and 9% less coverage on 1 binary(readpng).
 
-<img src="https://github.com/gz-thesis/sezzer/raw/master/test/bench.png" width="660" height="420">
+<img src="https://github.com/gz-thesis/sezzer/raw/master/test/bench.png" width="660" height="420" />
 
 The result of Lava-M test suite experiment showed that for three out of the four binaries, Sezzer is not only able to
 find all the vulnerabilities established, but also able to trigger crashes that are not listed
 by the authors of LAVA, and for who, Sezzer is able to find 2076 out of 2136 crashes.
 
-<img src="https://github.com/gz-thesis/sezzer/raw/master/test/lava.png" width="660" height="420">
+<img src="https://github.com/gz-thesis/sezzer/raw/master/test/lava.png" width="660" height="420" />
 
 
-# Installation
+## Installation
 
 Sezzer is composed of four major parts and one optional component:
 
@@ -40,8 +40,6 @@ $ git clone https://github.com/gz-thesis/sezzer.git $SEZZER_HOME
 Since all the components are set up and executed inside their own docker containers, docker is required to be set up first.
 #### setup docker
 Follow the instructions of [Get Docker CE for Ubuntu](https://docs.docker.com/install/linux/docker-ce/ubuntu/)
-
-#### 
 
 
 #### setup postgres and (optional)pgadmin4
@@ -79,7 +77,7 @@ $ cp -r debian-9.2.1-i386 $SEZZER_HOME/s2e/images
 ```
 
 
-# Run
+## Run
 For detailed usage information, you can try
 ```bash
 $ cd $SEZZER_HOME
@@ -102,7 +100,11 @@ $ python ./cimfuzz.py run\
 ```
 to test the readelf binary and start from there.
 
+## Contact
+[<img src="https://avatars2.githubusercontent.com/u/3630564" width="100px;" /><br /><sub><b>Guodong Zhu</b></sub>](mailto:guodong@uga.edu)
 
+## LICENSE
+[MIT](LICENSE)
 
 
 
